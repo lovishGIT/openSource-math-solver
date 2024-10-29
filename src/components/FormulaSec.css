@@ -26,11 +26,12 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
   }
   
   .nav-button:hover {
-    background-color: #f3f4f6;
-    color: #4b5563;
+    background-color: #7c3aed;
+    color: #ffffff;
   }
   
   .formula-content {
@@ -76,14 +77,16 @@
     justify-content: center;
     gap: 0.5rem;
     margin-top: 0.75rem;
+    margin-bottom: 0.75rem;
   }
   
   .dot {
-    width: 0.5rem;
-    height: 0.5rem;
+    width: 1rem;
+    height: 1rem;
     border-radius: 50%;
     background-color: #e5e7eb;
     transition: all 0.2s ease;
+    cursor: pointer;
   }
   
   .dot.active {

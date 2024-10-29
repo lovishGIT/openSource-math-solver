@@ -3,6 +3,7 @@ import { ChevronLeft, ChevronRight, Lightbulb } from 'lucide-react';
 import './FormulaSec.css';
 
 interface Formula {
+  id: number;
   title: string;
   equation: string;
   example: string;
@@ -10,21 +11,25 @@ interface Formula {
 
 const formulas: Formula[] = [
   {
+    id: 0,
     title: "Quadratic Formula",
     equation: "x = (-b ± √(b² - 4ac)) / 2a",
     example: "Try: x² + 2x + 1"
   },
   {
+    id: 1,
     title: "Linear Equation",
     equation: "y = mx + b",
     example: "Try: 2x + 3"
   },
   {
+    id: 2,
     title: "Polynomial",
     equation: "ax³ + bx² + cx + d",
     example: "Try: x³ - 2x² + 1"
   },
   {
+    id: 3,
     title: "Exponential",
     equation: "y = aˣ",
     example: "Try: 2^x"
@@ -81,12 +86,12 @@ const FormulaShowcase: React.FC = () => {
       </div>
 
       <div className="formula-dots">
-        {formulas.map((_, index) => (
+        {formulas.map(formulaItem => (
           <button
-            key={index}
-            className={`dot ${index === currentIndex ? 'active' : ''}`}
-            onClick={() => setCurrentIndex(index)}
-            aria-label={`Go to formula ${index + 1}`}
+            key={formulaItem.id}
+            className={`dot ${formulaItem.id === currentIndex ? 'active' : ''}`}
+            onClick={() => setCurrentIndex(formulaItem.id)}
+            aria-label={`Go to formula ${formulaItem.id + 1}`}
           />
         ))}
       </div>
