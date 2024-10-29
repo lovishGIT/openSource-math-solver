@@ -6,7 +6,7 @@ const WaveSVG: React.FC = () => {
   useEffect(() => {
     const animateWave = () => {
       const wavePath = document.querySelector('.wave-path') as SVGPathElement;
-      let direction = 1; // 1 for up, -1 for down
+      let direction = .3; // 1 for up, -1 for down
       let frame = 0;
 
       const animate = () => {

@@ -27,7 +27,7 @@ const App: React.FC = () => {
 
       <main className="container">
         <MathSolver />
-        < FormulaDisp/>
+        <FormulaDisp />
       </main>
     </div>
   );
